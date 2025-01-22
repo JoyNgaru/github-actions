@@ -6,21 +6,12 @@ on: # Event that triggers the workflow
     branches: [ main ] # Branches to run the workflow on
   workflow_dispatch: # Workflow dispatch event
 jobs: # Jobs that run in the workflow
-  build: # Job ID
+  example-job: # Job ID
     runs-on: ubuntu-latest # Operating system
     steps: # Steps that run in the job
-      - uses: actions/checkout@v2 # Action to checkout the repository
-      - name: Set up Node.js # Step ID
-        uses: actions/setup-node@v2 # Action to set up Node.js
-        with: # Input parameters
-          node-version: '14' # Node.js version
-      - name: Install dependencies # Step ID
-        run: npm install # Command to install dependencies
-      - name: Build # Step ID
-        run: npm run build # Command to build the project
-      - name: Test # Step ID
-        run: npm test # Command to test the project
-      - name: Lint # Step ID
-        run: npm run lint # Command to lint the project
+      - name: Checkout code # Step ID
+        uses: actions/checkout@v3 # Action to checkout the repository
+      
+    
       - name: Say hello # Step ID
         run: echo Hello, Workflow done, change acknowledged! # Command to print a message
