@@ -31,7 +31,7 @@ Here is the content of the starter workflow:
 
 name: Starter Workflow
 
-# Trigger this workflow on a push to the main branch
+Trigger this workflow on a push to the main branch
 on:
   push:
     branches:
@@ -53,33 +53,33 @@ jobs:
 ## Explanation of the Workflow
 name: The name of the workflow as it appears in the Actions tab on GitHub.
 
-## on:
+on:
 
 Defines the trigger for the workflow.
 
 This workflow runs whenever code is pushed to the main branch.
 
-## jobs:
+jobs:
 
 Each workflow consists of one or more jobs. In this case, we have a single job, example-job.
 
-## runs-on:
+ runs-on:
 
 Specifies the environment for the job. Here, ubuntu-latest is used.
 
-## steps:
+ steps:
 
 Individual tasks that the job will perform.
 
-## actions/checkout@v3: A pre-built action that checks out the repository code.
+ actions/checkout@v3: A pre-built action that checks out the repository code.
 
-## run: Executes shell commands, such as printing a message.
+run: Executes shell commands, such as printing a message.
 
 # How to Use This Workflow
 Step 1: Clone the Repository
 Clone this repository to your local machine:
 
-# git clone https://github.com/<your-username>/github-actions.git
+git clone https://github.com/<your-username>/github-actions.git
 Step 2: Modify the Workflow
 You can modify the workflow file to:
 
